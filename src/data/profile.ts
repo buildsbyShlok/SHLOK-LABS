@@ -14,7 +14,7 @@ export const profile = {
   github: "https://github.com/buildsbyShlok/Electronics-Engineering",
   githubUsername: "buildsbyShlok",
   linkedin: "https://linkedin.com/in/shlokrajput",
-  resume: "/resume.pdf",
+  resume: "https://drive.google.com/file/d/10SPIGrZ7YBh-ljiINLH-rDWQbLPvDYKs/view?usp=drive_link",
   positioning: "Hardware + Software Engineering",
   openTo: [
     "Robotics & Hardware projects",
