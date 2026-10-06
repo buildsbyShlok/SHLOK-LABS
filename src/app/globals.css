@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+
+:root {
+  --bg: #0a0a0a;
+  --bg-elevated: #121214;
+  --fg: #fafafa;
+  --fg-muted: #8e8e93;
+  --fg-subtle: #52525b;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.18);
+  --accent: #3b82f6;
+  
+  --font-sans: 'Inter Variable', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0a0a0a;
+  color: #fafafa;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+  color: #fff;
+}
+
+.grid-overlay {
+  background-image: 
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--fg-subtle);
+  letter-spacing: 0.15em;
+}
+
+.section-title {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.dashed-line {
+  mask-image: repeating-linear-gradient(to bottom, transparent, transparent 4px, black 4px, black 8px);
+}
+
+.crosshair-dot {
+  width: 3px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+}
